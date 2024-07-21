@@ -10,8 +10,6 @@ declare global {
   }
 }
 
-
-
 const getRandomInt = (min: any, max: any) => Math.random() * (max - min) + min;
 
 colors.push(getRandomInt(0, 50), getRandomInt(0, 50), getRandomInt(0, 50));
@@ -65,13 +63,13 @@ function createCells() {
     colorFn: function () {
       return this.alive ? this.color + ",1" : "0,0,0,0";
     },
-    process: function (neighbors, x, y) {
+    process: function (neighbors: any, x: any, y: any) {
       if (this.age === y) {
         var index = neighbors
-          .filter(function (neighbor) {
+          .filter(function (neighbor: any) {
             return neighbor.coords.y === y - 1;
           })
-          .map(function (neighbor) {
+          .map(function (neighbor: any) {
             return neighbor.creature.alive ? 1 : 0;
           });
         index = parseInt(index.join(""), 2);
@@ -88,18 +86,15 @@ function createCells() {
       colorFn: function () {
         return this.colors[this.state];
       },
-      process: function (neighbors, x, y) {
+      process: function (neighbors: any) {
         var next = (this.state + 1) % 20;
-        var changing = neighbors.some(function (spot) {
+        var changing = neighbors.some(function (spot: any) {
           return spot.creature.state === next;
         });
         if (changing) this.state = next;
         return true;
       },
     },
-    function () {
-      this.state = Math.floor(Math.random() * 20);
-    }
   );
 
   bbTerrarium.grid = bbTerrarium.makeGridWithDistribution([
@@ -115,9 +110,9 @@ function createCells() {
   const useMouse = () => {
     const x = ref(0);
     const y = ref(0);
-    const update = (e) => {
+    const update = (e: MouseEvent) => {
       console.log(e);
-      bbTerrarium.animate(1 );
+      bbTerrarium.animate(1);
       x.value = e.pageX;
       y.value = e.pageY;
     };
@@ -135,20 +130,14 @@ function createCells() {
 </script>
 
 <template>
-  <div
-    class="full"
-    @mouseenter="mouseEnter"
-    @mousemove="mouseMove"
-    @mouseleave="mouseLeave"
-  ></div>
+  <div class="full"></div>
   <h1>Tom Tier.</h1>
 </template>
 
 <style>
 h1 {
   font-size: 10vw;
-  font-family: 'Pixellari';
-  
+  font-family: "Pixellari";
 }
 canvas {
   width: 100% !important;
