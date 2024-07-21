@@ -79,23 +79,21 @@ function createCells() {
     },
   });
 
-  window.terra.registerCA(
-    {
-      type: "cyclic",
-      colors: ["255,0,0,1", "0,255,0,1", "0,0,0,1"],
-      colorFn: function () {
-        return this.colors[this.state];
-      },
-      process: function (neighbors: any) {
-        var next = (this.state + 1) % 20;
-        var changing = neighbors.some(function (spot: any) {
-          return spot.creature.state === next;
-        });
-        if (changing) this.state = next;
-        return true;
-      },
+  window.terra.registerCA({
+    type: "cyclic",
+    colors: ["255,0,0,1", "0,255,0,1", "0,0,0,1"],
+    colorFn: function () {
+      return this.colors[this.state];
     },
-  );
+    process: function (neighbors: any) {
+      var next = (this.state + 1) % 20;
+      var changing = neighbors.some(function (spot: any) {
+        return spot.creature.state === next;
+      });
+      if (changing) this.state = next;
+      return true;
+    },
+  });
 
   bbTerrarium.grid = bbTerrarium.makeGridWithDistribution([
     ["plant", 50],
@@ -132,6 +130,43 @@ function createCells() {
 <template>
   <div class="full"></div>
   <h1>Tom Tier.</h1>
+  <iframe
+    width="100%"
+    height="350"
+    scrolling="no"
+    frameborder="no"
+    allow="autoplay"
+    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1853197767&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+  ></iframe>
+  <div
+    style="
+      font-size: 5vw;
+      color: #cccccc;
+      line-break: anywhere;
+      word-break: normal;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-family: Pixellari;
+      font-weight: 100;
+    "
+  >
+    <a
+      href="https://soundcloud.com/first-dozen"
+      title="first dozen"
+      target="_blank"
+      style="color: #cccccc; text-decoration: none"
+      >first dozen</a
+    >
+    ·
+    <a
+      href="https://soundcloud.com/first-dozen/sets/mixes"
+      title="FD Mixes 23/06"
+      target="_blank"
+      style="color: #cccccc; text-decoration: none"
+      >FD Mixes 23/06</a
+    >
+  </div>
 </template>
 
 <style>
