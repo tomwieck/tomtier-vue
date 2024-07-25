@@ -142,34 +142,63 @@ function createCells() {
       <span class="jittery">.</span>
     </h1>
   </div>
-  <h2>
-    Cool It Down
-  </h2>
+  <h2>Cool It Down</h2>
   <div class="audio-container">
     <audio controls>
-      <source src="/DOWN.mp3" type="audio/mpeg">
+      <source src="/DOWN.mp3" type="audio/mpeg" />
       Your browser does not support the audio tag.
     </audio>
   </div>
 
-  <h2>
-    Goron
-  </h2>
+  <h2>Goron</h2>
   <div class="audio-container">
     <audio controls>
-      <source src="/GORON.mp3" type="audio/mpeg">
+      <source src="/GORON.mp3" type="audio/mpeg" />
       Your browser does not support the audio tag.
     </audio>
   </div>
 
-  <iframe
-    width="100%"
-    height="350"
-    scrolling="no"
-    frameborder="no"
-    allow="autoplay"
-    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1853197767&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
-  ></iframe>
+  <div style="margin: 0 auto; text-align:center;">
+    <iframe
+      width="50%"
+      height="250px"
+      scrolling="no"
+      frameborder="no"
+      allow="autoplay"
+      style="margin: 0 auto;"
+      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1853197767&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+    ></iframe>
+  </div>
+  <div
+    style="
+      font-size: 10px;
+      color: #cccccc;
+      line-break: anywhere;
+      word-break: normal;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+        Garuda, Verdana, Tahoma, sans-serif;
+      font-weight: 100;
+    "
+  >
+    <a
+      href="https://soundcloud.com/first-dozen"
+      title="first dozen"
+      target="_blank"
+      style="color: #cccccc; text-decoration: none"
+      >first dozen</a
+    >
+    ·
+    <a
+      href="https://soundcloud.com/first-dozen/sets/mixes"
+      title="FD Mixes 23/06"
+      target="_blank"
+      style="color: #cccccc; text-decoration: none"
+      >FD Mixes 23/06</a
+    >
+  </div>
   <div
     style="
       font-size: 5vw;
@@ -205,11 +234,12 @@ function createCells() {
 h1 {
   font-size: 10vw;
   font-family: "Pixellari";
+  margin: 0;
 }
 
 h2 {
   text-align: center;
-  font-size: 5vw;
+  font-size: 3vw;
   font-family: "Pixellari";
   margin: 5px;
   margin-bottom: -20px;
@@ -225,8 +255,8 @@ canvas {
 }
 
 .full {
-  width: 100% !important;
-  height: 100vh !important;
+  width: 100%;
+  height: 100vh;
   left: 0;
   top: 0;
   position: absolute;
