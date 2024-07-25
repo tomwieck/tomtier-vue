@@ -158,16 +158,30 @@ function createCells() {
     </audio>
   </div>
 
-  <div style="margin: 0 auto; text-align:center;">
+  <div style="margin: 0 auto; text-align: center">
     <iframe
-      width="50%"
-      height="250px"
+      width="100%"
+      height="300"
       scrolling="no"
       frameborder="no"
       allow="autoplay"
-      style="margin: 0 auto;"
       src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1853197767&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     ></iframe>
+    <div
+      style="
+        font-size: 10px;
+        color: #cccccc;
+        line-break: anywhere;
+        word-break: normal;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+          Garuda, Verdana, Tahoma, sans-serif;
+        font-weight: 100;
+      "
+    >
+    </div>
   </div>
   <div
     style="
@@ -182,52 +196,7 @@ function createCells() {
         Garuda, Verdana, Tahoma, sans-serif;
       font-weight: 100;
     "
-  >
-    <a
-      href="https://soundcloud.com/first-dozen"
-      title="first dozen"
-      target="_blank"
-      style="color: #cccccc; text-decoration: none"
-      >first dozen</a
-    >
-    ·
-    <a
-      href="https://soundcloud.com/first-dozen/sets/mixes"
-      title="FD Mixes 23/06"
-      target="_blank"
-      style="color: #cccccc; text-decoration: none"
-      >FD Mixes 23/06</a
-    >
-  </div>
-  <div
-    style="
-      font-size: 5vw;
-      color: #cccccc;
-      line-break: anywhere;
-      word-break: normal;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      font-family: Pixellari;
-      font-weight: 100;
-    "
-  >
-    <a
-      href="https://soundcloud.com/first-dozen"
-      title="first dozen"
-      target="_blank"
-      style="color: #cccccc; text-decoration: none"
-      >first dozen</a
-    >
-    ·
-    <a
-      href="https://soundcloud.com/first-dozen/sets/mixes"
-      title="FD Mixes 23/06"
-      target="_blank"
-      style="color: #cccccc; text-decoration: none"
-      >FD Mixes 23/06</a
-    >
-  </div>
+  ></div>
 </template>
 
 <style>
