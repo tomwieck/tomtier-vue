@@ -130,17 +130,17 @@ function createCells() {
 <template>
   <div class="full"></div>
   <div class="jittery-container">
-    <h1 class="jittery">T</h1>
-    <h1 class="jittery">o</h1>
-    <h1 class="jittery">m</h1>
-    &nbsp;
-    &nbsp;
-    &nbsp;
-    <h1 class="jittery">T</h1>
-    <h1 class="jittery">i</h1>
-    <h1 class="jittery">e</h1>
-    <h1 class="jittery">r</h1>
-    <h1 class="jittery">.</h1>
+    <h1>
+      <span class="jittery">T</span>
+      <span class="jittery">o</span>
+      <span class="jittery">m</span>
+      &nbsp;
+      <span class="jittery">T</span>
+      <span class="jittery">i</span>
+      <span class="jittery">e</span>
+      <span class="jittery">r</span>
+      <span class="jittery">.</span>
+    </h1>
   </div>
   <h2>
     Cool It Down
@@ -151,6 +151,17 @@ function createCells() {
       Your browser does not support the audio tag.
     </audio>
   </div>
+
+  <h2>
+    Goron
+  </h2>
+  <div class="audio-container">
+    <audio controls>
+      <source src="/GORON.mp3" type="audio/mpeg">
+      Your browser does not support the audio tag.
+    </audio>
+  </div>
+
   <iframe
     width="100%"
     height="350"

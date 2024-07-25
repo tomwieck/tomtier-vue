@@ -50,13 +50,13 @@
   width: 100%;
 }
 
-.jittery-container h1:nth-child(odd) {
+.jittery-container span:nth-child(odd) {
   animation: jitter 250ms linear infinite, jitterY 5000ms linear infinite;
   color: black;
 }
 
 
-.jittery-container h1:nth-child(even) {
+.jittery-container span:nth-child(even) {
   animation: jitter 200ms linear infinite, jitterY 5000ms reverse infinite;
   color: red;
 }
@@ -66,6 +66,8 @@
   text-align: center;
   width: 100%;
 }
+
 audio {
+  height: 32px;
   width: 90vw;
 }
