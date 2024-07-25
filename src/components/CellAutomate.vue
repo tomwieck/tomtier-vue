@@ -96,14 +96,14 @@ function createCells() {
   });
 
   bbTerrarium.grid = bbTerrarium.makeGridWithDistribution([
-    ["plant", 50],
+    ["plant", 40],
     ["brute", 5],
     ["bully", 5],
     // ["elementary", 1000],
     // ["cyclic", 100],
   ]);
 
-  bbTerrarium.animate(10);
+  bbTerrarium.animate(200);
 
   const useMouse = () => {
     const x = ref(0);
@@ -129,7 +129,28 @@ function createCells() {
 
 <template>
   <div class="full"></div>
-  <h1>Tom Tier.</h1>
+  <div class="jittery-container">
+    <h1 class="jittery">T</h1>
+    <h1 class="jittery">o</h1>
+    <h1 class="jittery">m</h1>
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    <h1 class="jittery">T</h1>
+    <h1 class="jittery">i</h1>
+    <h1 class="jittery">e</h1>
+    <h1 class="jittery">r</h1>
+    <h1 class="jittery">.</h1>
+  </div>
+  <h2>
+    Cool It Down
+  </h2>
+  <div class="audio-container">
+    <audio controls>
+      <source src="/DOWN.mp3" type="audio/mpeg">
+      Your browser does not support the audio tag.
+    </audio>
+  </div>
   <iframe
     width="100%"
     height="350"
@@ -174,6 +195,15 @@ h1 {
   font-size: 10vw;
   font-family: "Pixellari";
 }
+
+h2 {
+  text-align: center;
+  font-size: 5vw;
+  font-family: "Pixellari";
+  margin: 5px;
+  margin-bottom: -20px;
+}
+
 canvas {
   width: 100% !important;
   height: 100% !important;

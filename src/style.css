@@ -18,3 +18,54 @@
   font-style: normal;
   src: local("Pixellari"), url(@/assets/Pixellari.ttf) format("truetype");
 }
+
+.jittery {
+  display: inline-block;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: white;
+  text-transform:uppercase;
+  margin: 1vw;
+}
+
+@keyframes jitter {
+  50% {
+    transform: skewY(1deg) skewX(-1deg) scale(1.004);
+  }
+}
+
+@keyframes jitterY {
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+@keyframes jitterYMinus {
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+.jittery-container {
+  text-align: center;
+  width: 100%;
+}
+
+.jittery-container h1:nth-child(odd) {
+  animation: jitter 250ms linear infinite, jitterY 5000ms linear infinite;
+  color: black;
+}
+
+
+.jittery-container h1:nth-child(even) {
+  animation: jitter 200ms linear infinite, jitterY 5000ms reverse infinite;
+  color: red;
+}
+
+.audio-container {
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+}
+audio {
+  width: 90vw;
+}
