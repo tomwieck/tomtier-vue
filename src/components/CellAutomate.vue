@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
+import RadioPlayer from "./RadioPlayer.vue";
 const colors: Array<number>[] = [];
 
 let energy = [50, 50, 100];
@@ -103,27 +104,7 @@ function createCells() {
     // ["cyclic", 100],
   ]);
 
-  bbTerrarium.animate(200);
-
-  const useMouse = () => {
-    const x = ref(0);
-    const y = ref(0);
-    const update = (e: MouseEvent) => {
-      console.log(e);
-      bbTerrarium.animate(1);
-      x.value = e.pageX;
-      y.value = e.pageY;
-    };
-    onMounted(() => {
-      window.addEventListener("mousemove", update);
-    });
-    onUnmounted(() => {
-      window.addEventListener("mousemove", update);
-    });
-    return { x, y };
-  };
-
-  useMouse();
+  bbTerrarium.animate();
 }
 </script>
 
@@ -142,6 +123,9 @@ function createCells() {
       <span class="jittery">.</span>
     </h1>
   </div>
+
+  <RadioPlayer />
+
   <h2>Cool It Down</h2>
   <div class="audio-container">
     <audio controls>

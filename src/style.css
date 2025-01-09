@@ -23,7 +23,7 @@
   display: inline-block;
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: white;
-  text-transform:uppercase;
+  text-transform: uppercase;
   margin: 1vw;
 }
 
@@ -54,7 +54,6 @@
   animation: jitter 250ms linear infinite, jitterY 5000ms linear infinite;
   color: black;
 }
-
 
 .jittery-container span:nth-child(even) {
   animation: jitter 200ms linear infinite, jitterY 5000ms reverse infinite;
