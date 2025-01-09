@@ -1,11 +1,9 @@
 <script setup lang="ts">
-import CellAutomate from './components/CellAutomate.vue'
+import Main from "./components/Main.vue";
 </script>
 
 <template>
-  <CellAutomate />
+  <Main />
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
