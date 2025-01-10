@@ -1,15 +1,11 @@
 <script setup lang="ts">
 import Heading from "./Heading.vue";
 import RadioPlayer from "./RadioPlayer.vue";
-// @ts-ignore
-import CellAutomate from "./CellAutomate.vue";
 import AudioPlayer from "./AudioPlayer.vue";
 import Soundcloud from "./Soundcloud.vue";
 </script>
 
 <template>
-  <CellAutomate />
-
   <Heading text="First Dozen" />
 
   <h2>Radio</h2>
