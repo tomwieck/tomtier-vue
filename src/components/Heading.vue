@@ -17,7 +17,7 @@ const props = defineProps({
 <style scoped>
 .jittery {
   display: inline-block;
-  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: white;
   text-transform: uppercase;
   margin: 1vw;

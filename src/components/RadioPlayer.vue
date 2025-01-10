@@ -3,7 +3,7 @@
 <template>
   <div class="center">
     <iframe
-      src="https://172.236.31.247/public/first_dozen/embed?theme=dark"
+      src="https://stream.firstdozenradio.online/listen/first_dozen/radio.mp3"
       frameborder="0"
       allowtransparency="false"
       style="
