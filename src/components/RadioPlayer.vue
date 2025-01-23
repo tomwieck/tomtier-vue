@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref, watch } from "vue";
-import { useRouter } from "vue-router";
+import { onMounted, onUnmounted, ref } from "vue";
 
 const props = defineProps({
   url: {
@@ -9,8 +8,6 @@ const props = defineProps({
       "https://stream.firstdozenradio.online/listen/first_dozen/radio.mp3",
   },
 });
-
-const router = useRouter();
 
 let audio: HTMLAudioElement | null = null;
 let isPlaying = ref(false);

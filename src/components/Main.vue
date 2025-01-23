@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import Heading from "./Heading.vue";
-import RadioPlayer from "./RadioPlayer.vue";
 import AudioPlayer from "./AudioPlayer.vue";
 import Soundcloud from "./Soundcloud.vue";
 </script>
