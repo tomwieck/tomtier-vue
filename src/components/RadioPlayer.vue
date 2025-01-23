@@ -58,7 +58,7 @@ onUnmounted(() => {
   top: 0;
   z-index: 999;
   filter: drop-shadow(0px 3px 3px black);
-  background-image: url("./bg.jpg");
+  background-image: url("./bg.png");
   background-repeat: repeat-x;
   background-size: contain;
 }

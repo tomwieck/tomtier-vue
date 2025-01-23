@@ -16,6 +16,32 @@ import Soundcloud from "./Soundcloud.vue";
 
   <h2>Goron</h2>
   <AudioPlayer file="/GORON.mp3" />
+
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
 </template>
 
 <style>
