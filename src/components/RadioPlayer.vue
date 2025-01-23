@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { onMounted, ref } from "vue";
+import { onMounted, onUnmounted, ref, watch } from "vue";
+import { useRouter } from "vue-router";
 
 const props = defineProps({
   url: {
@@ -8,6 +9,8 @@ const props = defineProps({
       "https://stream.firstdozenradio.online/listen/first_dozen/radio.mp3",
   },
 });
+
+const router = useRouter();
 
 let audio: HTMLAudioElement | null = null;
 let isPlaying = ref(false);
@@ -32,18 +35,40 @@ onMounted(() => {
     return isPlaying;
   });
 });
+
+onUnmounted(() => {
+  isPlaying.value = false;
+  audio?.pause();
+});
 </script>
 
 <template>
-  <div @click="play" class="overlap">
-    <img class="layer1" :class="{ playing: isPlaying }" src="/logo.png" />
-    <img class="layer2" :class="{ playing: isPlaying }" src="/ball.png" />
+  <div class="sticky">
+    <div @click="play" class="container">
+      <img class="layer1" :class="{ playing: isPlaying }" src="/logo.png" />
+      <img class="layer2" :class="{ playing: isPlaying }" src="/ball.png" />
+      <div class="text">Now Playing:</div>
+    </div>
   </div>
 </template>
 
 <style>
-.overlap {
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  filter: drop-shadow(0px 3px 3px black);
+  background-image: url("./bg.jpg");
+  background-repeat: repeat-x;
+  background-size: contain;
+}
+
+.container {
   display: grid;
+  width: 100%;
+  height: 80px;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  grid-template-columns: minmax(80px, 80px) minmax(100%, 100%);
 }
 
 .layer1,
@@ -51,8 +76,12 @@ onMounted(() => {
   grid-column: 1;
   grid-row: 1;
   margin: auto;
-  width: 300px;
-  height: 300px;
+  width: 80px;
+  height: 80px;
+}
+
+.text {
+  grid-column: 2;
 }
 
 .layer2 {

@@ -11,6 +11,10 @@
     pointer;
 }
 
+body {
+  margin: 0;
+}
+
 @font-face {
   font-family: "Pixellari";
   font-style: normal;

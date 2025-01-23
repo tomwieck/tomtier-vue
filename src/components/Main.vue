@@ -8,9 +8,6 @@ import Soundcloud from "./Soundcloud.vue";
 <template>
   <Heading text="First Dozen" />
 
-  <h2>Radio</h2>
-  <RadioPlayer />
-
   <h2>First Dozen Day Rave 2024 Mixes</h2>
   <Soundcloud />
 
