@@ -16,7 +16,6 @@
         color: #cccccc;
         line-break: anywhere;
         word-break: normal;
-        overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
         font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
