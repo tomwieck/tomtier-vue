@@ -5,6 +5,7 @@ const radioUrl =
   "https://stream.firstdozenradio.online/api/nowplaying/first_dozen";
 
 let nowPlaying = ref("");
+let songImgUrl = ref("");
 
 // const websocketUrl =
 //   "wss://stream.firstdozenradio.online/api/live/nowplaying/websocket";
@@ -73,7 +74,10 @@ const getNowPlayingData = () => {
       //   console.log(response);
       const songTitle = response.now_playing.song.title;
       const songArtist = response.now_playing.song.artist;
+      const songImg = response.now_playing.song.art;
+
       nowPlaying.value = `${songTitle} - ${songArtist}`;
+      songImgUrl.value = songImg;
     })
     .catch((error) => {
       console.log("Looks like there was a problem: \n", error);
@@ -94,7 +98,14 @@ onUnmounted(() => {
 </script>
 
 <template>
+  <img :src="songImgUrl" />
   <div class="now-playing">{{ nowPlaying }}</div>
 </template>
 
-<style></style>
+<style scoped>
+img {
+  height: 80px;
+  width: 80px;
+  padding-right: 16px;
+}
+</style>
