@@ -19,15 +19,13 @@ nav {
   display: flex;
   width: 100%;
   justify-content: space-around;
-  font-size: 20px;
-  border: 1px solid black;
+  font-size: 24px;
   margin-bottom: 16px;
+  filter: drop-shadow(0px 3px 3px black);
 }
 
 nav a {
-  background-color: darkgreen;
   color: white;
-  border: 3px solid black;
   width: 100%;
   text-align: center;
   padding: 8px;
