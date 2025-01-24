@@ -3,10 +3,11 @@ import { onMounted, onUnmounted, ref } from "vue";
 
 const radioUrl =
   "https://stream.firstdozenradio.online/api/nowplaying/first_dozen";
-const websocketUrl =
-  "wss://stream.firstdozenradio.online/api/live/nowplaying/websocket";
 
 let nowPlaying = ref("");
+
+// const websocketUrl =
+//   "wss://stream.firstdozenradio.online/api/live/nowplaying/websocket";
 
 // let currentTime = 0;
 // let socket = new WebSocket(websocketUrl);
