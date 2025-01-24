@@ -45,8 +45,11 @@ onUnmounted(() => {
     <div @click="play" class="container">
       <img class="layer1" :class="{ playing: isPlaying }" src="/logo.png" />
       <img class="layer2" :class="{ playing: isPlaying }" src="/ball.png" />
-      <div class="text">
+      <div v-if="isPlaying" class="text">
         <NowPlaying />
+      </div>
+      <div v-else >
+        &#9658; Play
       </div>
     </div>
   </div>
