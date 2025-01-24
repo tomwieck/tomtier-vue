@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from "vue";
+import NowPlaying from "./NowPlaying.vue";
 
 const props = defineProps({
   url: {
@@ -44,7 +45,9 @@ onUnmounted(() => {
     <div @click="play" class="container">
       <img class="layer1" :class="{ playing: isPlaying }" src="/logo.png" />
       <img class="layer2" :class="{ playing: isPlaying }" src="/ball.png" />
-      <div class="text">Now Playing:</div>
+      <div class="text">
+        <NowPlaying />
+      </div>
     </div>
   </div>
 </template>
