@@ -4,6 +4,9 @@ import Heading from "./Heading.vue";
 
 <template>
   <Heading text="First Dozen" />
+  <div class="img-container">
+    <img src="/dealer.png" />
+  </div>
 </template>
 
 <style>
@@ -19,5 +22,14 @@ h2 {
   margin: 5px;
   margin-bottom: 0;
   margin-left: 34px;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  max-width: 300px;
 }
 </style>

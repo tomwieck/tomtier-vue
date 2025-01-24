@@ -48,7 +48,7 @@ onUnmounted(() => {
       <div v-if="isPlaying" class="text">
         <NowPlaying />
       </div>
-      <div v-else>&#9658; Play</div>
+      <div v-else class="text">&#9658; Play</div>
     </div>
   </div>
 </template>
@@ -61,6 +61,12 @@ onUnmounted(() => {
   background-image: url("@/assets/bg.png");
   background-repeat: repeat-x;
   background-size: contain;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
 }
 
 .container {

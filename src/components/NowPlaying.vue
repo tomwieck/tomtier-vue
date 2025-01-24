@@ -70,7 +70,7 @@ const getNowPlayingData = () => {
   })
     .then((res) => res.json())
     .then((response) => {
-    //   console.log(response);
+      //   console.log(response);
       const songTitle = response.now_playing.song.title;
       const songArtist = response.now_playing.song.artist;
       nowPlaying.value = `${songTitle} - ${songArtist}`;
