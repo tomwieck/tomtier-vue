@@ -21,7 +21,6 @@ nav {
   justify-content: space-around;
   font-size: 24px;
   margin-bottom: 16px;
-  filter: drop-shadow(0px 3px 3px black);
 }
 
 nav a {
