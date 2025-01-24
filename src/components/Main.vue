@@ -1,46 +1,9 @@
 <script setup lang="ts">
 import Heading from "./Heading.vue";
-import AudioPlayer from "./AudioPlayer.vue";
-import Soundcloud from "./Soundcloud.vue";
 </script>
 
 <template>
   <Heading text="First Dozen" />
-
-  <h2>First Dozen Day Rave 2024 Mixes</h2>
-  <Soundcloud />
-
-  <h2>Cool It Down</h2>
-  <AudioPlayer file="/DOWN.mp3" />
-
-  <h2>Goron</h2>
-  <AudioPlayer file="/GORON.mp3" />
-
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
 </template>
 
 <style>
@@ -51,10 +14,10 @@ h1 {
 }
 
 h2 {
-  text-align: center;
   font-size: 3vw;
   font-family: "Pixellari";
   margin: 5px;
-  margin-bottom: -20px;
+  margin-bottom: 0;
+  margin-left: 34px;
 }
 </style>

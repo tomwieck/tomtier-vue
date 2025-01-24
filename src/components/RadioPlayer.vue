@@ -48,9 +48,7 @@ onUnmounted(() => {
       <div v-if="isPlaying" class="text">
         <NowPlaying />
       </div>
-      <div v-else >
-        &#9658; Play
-      </div>
+      <div v-else>&#9658; Play</div>
     </div>
   </div>
 </template>
@@ -61,8 +59,7 @@ onUnmounted(() => {
   top: 0;
   z-index: 999;
   filter: drop-shadow(0px 3px 3px black);
-  /* background-image: url("./bg.png"); */
-  background-color: black;
+  background-image: url("@/assets/bg.png");
   background-repeat: repeat-x;
   background-size: contain;
 }
