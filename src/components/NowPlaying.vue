@@ -76,7 +76,11 @@ const getNowPlayingData = () => {
       const songArtist = response.now_playing.song.artist;
       const songImg = response.now_playing.song.art;
 
-      nowPlaying.value = `${songTitle} - ${songArtist}`;
+      console.log("songArtist", songArtist, "songTitle", songTitle);
+
+      nowPlaying.value = songArtist.length
+        ? `${songTitle} - ${songArtist}`
+        : `${songTitle}`;
       songImgUrl.value = songImg;
     })
     .catch((error) => {
